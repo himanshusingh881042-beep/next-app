@@ -1,0 +1,96 @@
+.roleGrid {
+  @apply grid gap-6 xl:grid-cols-[minmax(320px,0.9fr)_minmax(420px,1.3fr)];
+}
+
+.panel {
+  @apply rounded-lg border border-line bg-white p-5 shadow-soft;
+}
+
+.panelHeader {
+  @apply mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between;
+}
+
+.eyebrow {
+  @apply text-xs font-extrabold uppercase text-hsbcRed;
+}
+
+.heading {
+  @apply text-xl font-extrabold text-canaraNavy;
+}
+
+.select {
+  @apply min-h-10 rounded-lg border border-line bg-white px-3;
+}
+
+.roleList,
+.successorList {
+  @apply grid gap-3;
+}
+
+.roleCard {
+  @apply rounded-md border border-line bg-white p-4 text-left transition hover:border-hsbcRed hover:shadow-soft;
+}
+
+.activeRoleCard {
+  @apply rounded-md border border-hsbcRed bg-white p-4 text-left shadow-[inset_4px_0_0_#DB0011] transition hover:border-hsbcRed hover:shadow-soft;
+}
+
+.roleCardTop {
+  @apply flex items-start justify-between gap-3;
+}
+
+.roleMeta {
+  @apply mt-2 block text-sm text-muted;
+}
+
+.fitTrack {
+  @apply mt-3 block h-2 overflow-hidden rounded-full bg-softBlue;
+}
+
+.fitFill {
+  @apply block h-full rounded-full bg-canaraGold;
+}
+
+.factGrid {
+  @apply grid gap-3 sm:grid-cols-3;
+}
+
+.fact {
+  @apply rounded-md border border-line bg-softBlue p-4;
+}
+
+.fact span {
+  @apply text-sm text-muted;
+}
+
+.fact strong {
+  @apply mt-1 block;
+}
+
+.subheading {
+  @apply mt-5 text-base font-extrabold;
+}
+
+.candidate {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.cardHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.cardHeader span {
+  @apply block text-sm text-muted;
+}
+
+.scoreList {
+  @apply mt-3 grid gap-2;
+}
+
+.cardText {
+  @apply mt-2 text-sm text-muted;
+}
+
+.cardText strong {
+  @apply text-ink;
+}

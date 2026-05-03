@@ -1,0 +1,30 @@
+.badge {
+  @apply w-fit rounded-full font-extrabold capitalize;
+}
+
+.small {
+  @apply px-2 py-1 text-xs;
+}
+
+.medium {
+  @apply px-3 py-1 text-sm;
+}
+
+.low,
+.High {
+  @apply bg-emerald-100 text-emerald-800;
+}
+
+.mediumRisk,
+.Moderate {
+  @apply bg-softGold text-amber;
+}
+
+.high,
+.Low {
+  @apply bg-red-100 text-red-800;
+}
+
+.neutral {
+  @apply bg-softBlue text-canaraBlue;
+}

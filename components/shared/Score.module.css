@@ -1,0 +1,15 @@
+.row {
+  @apply grid grid-cols-[100px_minmax(0,1fr)_38px] items-center gap-2 text-sm;
+}
+
+.label {
+  @apply text-muted;
+}
+
+.track {
+  @apply h-2 overflow-hidden rounded-full bg-softBlue;
+}
+
+.fill {
+  @apply block h-full rounded-full bg-canaraBlue;
+}

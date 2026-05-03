@@ -1,0 +1,71 @@
+.section {
+  @apply rounded-lg border border-line bg-white p-5 shadow-soft;
+}
+
+.header {
+  @apply mb-4 flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between;
+}
+
+.eyebrow {
+  @apply text-xs font-extrabold uppercase text-hsbcRed;
+}
+
+.heading {
+  @apply text-xl font-extrabold text-canaraNavy;
+}
+
+.filterGroup {
+  @apply grid grid-cols-4 rounded-md border border-line bg-softBlue p-1;
+}
+
+.filterButton {
+  @apply min-h-9 rounded-md px-3 text-sm font-bold text-muted;
+}
+
+.activeFilter {
+  @apply min-h-9 rounded-md bg-white px-3 text-sm font-bold text-canaraNavy shadow-sm;
+}
+
+.definitionGrid {
+  @apply mb-5 grid gap-3 lg:grid-cols-3;
+}
+
+.definition {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.definition p {
+  @apply mt-1 text-sm text-muted;
+}
+
+.employeeGrid {
+  @apply grid gap-3 lg:grid-cols-3;
+}
+
+.employeeCard {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.cardHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.cardHeader span {
+  @apply block text-sm text-muted;
+}
+
+.cardText {
+  @apply mt-3 text-sm text-muted;
+}
+
+.scoreList {
+  @apply mt-3 grid gap-2;
+}
+
+.competencies {
+  @apply mt-3 flex flex-wrap gap-2;
+}
+
+.competencies span {
+  @apply rounded-md bg-softGold px-2 py-1 text-xs font-bold text-canaraNavy;
+}

@@ -1,0 +1,158 @@
+{
+  "positions": [
+    {
+      "id": "pos-cto",
+      "title": "Chief Technology Officer",
+      "unit": "Technology",
+      "level": "Executive",
+      "vacancyHorizon": "12 months",
+      "risk": "high",
+      "transitionFrom": ["VP Engineering", "Head of Architecture", "Director of Product Engineering"],
+      "successors": [
+        {"employeeId": "emp-101", "fit": 92, "readiness": "Ready now", "development": "Board exposure and enterprise budget planning"},
+        {"employeeId": "emp-103", "fit": 84, "readiness": "6-12 months", "development": "People leadership at larger scale"},
+        {"employeeId": "emp-106", "fit": 71, "readiness": "12-24 months", "development": "Commercial strategy ownership"}
+      ]
+    },
+    {
+      "id": "pos-hrd",
+      "title": "HR Director",
+      "unit": "Human Resources",
+      "level": "Director",
+      "vacancyHorizon": "18 months",
+      "risk": "medium",
+      "transitionFrom": ["Senior HR Business Partner", "Talent Acquisition Lead", "Learning and Development Manager"],
+      "successors": [
+        {"employeeId": "emp-104", "fit": 88, "readiness": "Ready now", "development": "Compensation governance"},
+        {"employeeId": "emp-102", "fit": 76, "readiness": "6-12 months", "development": "Employee relations portfolio"}
+      ]
+    },
+    {
+      "id": "pos-finance",
+      "title": "Finance Controller",
+      "unit": "Finance",
+      "level": "Senior Manager",
+      "vacancyHorizon": "9 months",
+      "risk": "low",
+      "transitionFrom": ["Accounting Manager", "FP&A Manager", "Audit Lead"],
+      "successors": [
+        {"employeeId": "emp-105", "fit": 91, "readiness": "Ready now", "development": "Investor reporting cadence"},
+        {"employeeId": "emp-107", "fit": 68, "readiness": "12-24 months", "development": "Month-end close ownership"}
+      ]
+    },
+    {
+      "id": "pos-sales",
+      "title": "Regional Sales Head",
+      "unit": "Sales",
+      "level": "Director",
+      "vacancyHorizon": "6 months",
+      "risk": "high",
+      "transitionFrom": ["Area Sales Manager", "Strategic Accounts Lead", "Channel Sales Manager"],
+      "successors": [
+        {"employeeId": "emp-108", "fit": 82, "readiness": "6-12 months", "development": "Multi-region forecast ownership"},
+        {"employeeId": "emp-109", "fit": 62, "readiness": "12-24 months", "development": "Leadership coaching and pipeline discipline"}
+      ]
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp-101",
+      "name": "Aarav Mehta",
+      "currentRole": "VP Engineering",
+      "unit": "Technology",
+      "performance": "High",
+      "targetAchievement": 96,
+      "jobMatch": 94,
+      "potential": "High",
+      "competencies": ["Enterprise architecture", "Executive influence", "Scaled delivery"]
+    },
+    {
+      "id": "emp-102",
+      "name": "Priya Sharma",
+      "currentRole": "Talent Acquisition Lead",
+      "unit": "Human Resources",
+      "performance": "Moderate",
+      "targetAchievement": 74,
+      "jobMatch": 78,
+      "potential": "Medium",
+      "competencies": ["Hiring strategy", "Stakeholder management", "Workforce planning"]
+    },
+    {
+      "id": "emp-103",
+      "name": "Arjun Nair",
+      "currentRole": "Head of Architecture",
+      "unit": "Technology",
+      "performance": "High",
+      "targetAchievement": 90,
+      "jobMatch": 89,
+      "potential": "High",
+      "competencies": ["Platform strategy", "Security governance", "Mentoring"]
+    },
+    {
+      "id": "emp-104",
+      "name": "Maya Iyer",
+      "currentRole": "Senior HR Business Partner",
+      "unit": "Human Resources",
+      "performance": "High",
+      "targetAchievement": 91,
+      "jobMatch": 88,
+      "potential": "High",
+      "competencies": ["Org design", "Leadership coaching", "Policy design"]
+    },
+    {
+      "id": "emp-105",
+      "name": "Vikram Rao",
+      "currentRole": "Accounting Manager",
+      "unit": "Finance",
+      "performance": "High",
+      "targetAchievement": 95,
+      "jobMatch": 92,
+      "potential": "Medium",
+      "competencies": ["Controls", "Reporting", "Compliance"]
+    },
+    {
+      "id": "emp-106",
+      "name": "Sana Khan",
+      "currentRole": "Director of Product Engineering",
+      "unit": "Technology",
+      "performance": "Moderate",
+      "targetAchievement": 79,
+      "jobMatch": 81,
+      "potential": "High",
+      "competencies": ["Product delivery", "Team building", "Customer empathy"]
+    },
+    {
+      "id": "emp-107",
+      "name": "Kavya Menon",
+      "currentRole": "Audit Lead",
+      "unit": "Finance",
+      "performance": "Low",
+      "targetAchievement": 58,
+      "jobMatch": 61,
+      "potential": "Medium",
+      "competencies": ["Risk review", "Controls testing", "Documentation"]
+    },
+    {
+      "id": "emp-108",
+      "name": "Rohan Gupta",
+      "currentRole": "Strategic Accounts Lead",
+      "unit": "Sales",
+      "performance": "High",
+      "targetAchievement": 93,
+      "jobMatch": 87,
+      "potential": "High",
+      "competencies": ["Enterprise sales", "Negotiation", "Forecasting"]
+    },
+    {
+      "id": "emp-109",
+      "name": "Ananya Reddy",
+      "currentRole": "Area Sales Manager",
+      "unit": "Sales",
+      "performance": "Moderate",
+      "targetAchievement": 71,
+      "jobMatch": 73,
+      "potential": "Medium",
+      "competencies": ["Territory planning", "Coaching", "Pipeline review"]
+    }
+  ]
+}
