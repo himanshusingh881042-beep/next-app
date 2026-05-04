@@ -26,23 +26,23 @@ export function getVisibleEmployees(employees, performanceFilter) {
 }
 
 export function getDashboardMetrics(positions, employees) {
-  const readyNow = positions
+  const immediateReady = positions
     .flatMap((position) => position.successors)
-    .filter((successor) => successor.readiness === "Ready now").length;
+    .filter((successor) => successor.readiness === "Immediate").length;
 
   const coverageGaps = positions.filter((position) => {
-    return !position.successors.some((successor) => successor.readiness === "Ready now");
+    return !position.successors.some((successor) => successor.readiness === "Immediate" || successor.readiness === "Interim");
   }).length;
 
   return [
-    { label: "Critical Positions", value: positions.length, caption: "Tracked for continuity" },
-    { label: "Ready Now", value: readyNow, caption: "Successors available" },
+    { label: "Policy Positions", value: positions.length, caption: "Board and senior management roles" },
+    { label: "Immediate Ready", value: immediateReady, caption: "Candidates ready now" },
     {
-      label: "High Performers",
-      value: employees.filter((employee) => employee.performance === "High").length,
-      caption: "Meeting full targets"
+      label: "Board Roles",
+      value: positions.filter((position) => position.category === "Board").length,
+      caption: "NRC governed succession"
     },
-    { label: "Coverage Gaps", value: coverageGaps, caption: "Roles needing action", danger: true }
+    { label: "Coverage Gaps", value: coverageGaps, caption: "No immediate or interim candidate", danger: true }
   ];
 }
 
@@ -51,13 +51,18 @@ export function downloadSuccessionPlan(selectedRole, successors) {
     "Succession Planning Export",
     `Role: ${selectedRole.title}`,
     `Business unit: ${selectedRole.unit}`,
+    `Category: ${selectedRole.category}`,
+    `Governance owner: ${selectedRole.governanceOwner}`,
     `Vacancy horizon: ${selectedRole.vacancyHorizon}`,
+    "",
+    "Appointment flow:",
+    ...selectedRole.appointmentFlow.map((step, index) => `${index + 1}. ${step}`),
     "",
     "Successor candidates:"
   ];
 
   successors.forEach((successor, index) => {
-    lines.push(`${index + 1}. ${successor.employee.name} - ${successor.employee.currentRole} - Fit ${successor.fit} - ${successor.readiness}`);
+    lines.push(`${index + 1}. ${successor.employee.name} - ${successor.employee.currentRole} - ${successor.source} - Fit ${successor.fit} - ${successor.readiness} - ${successor.nrcReview}`);
   });
 
   const blob = new Blob([lines.join("\n")], { type: "text/plain" });

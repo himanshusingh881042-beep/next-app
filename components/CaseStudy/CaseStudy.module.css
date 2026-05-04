@@ -1,0 +1,35 @@
+.section {
+  @apply rounded-lg border border-line bg-white p-5 shadow-soft;
+}
+
+.header {
+  @apply mb-4;
+}
+
+.eyebrow {
+  @apply text-xs font-extrabold uppercase text-hsbcRed;
+}
+
+.heading {
+  @apply text-xl font-extrabold text-canaraNavy;
+}
+
+.summary {
+  @apply mt-2 max-w-4xl text-sm text-muted;
+}
+
+.phaseGrid {
+  @apply grid gap-3 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.phaseCard {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.phaseCard h3 {
+  @apply font-extrabold text-canaraNavy;
+}
+
+.phaseCard p {
+  @apply mt-2 text-sm text-muted;
+}

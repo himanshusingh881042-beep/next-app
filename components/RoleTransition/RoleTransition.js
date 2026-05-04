@@ -49,9 +49,18 @@ export default function RoleTransition({
         </div>
 
         <div className={styles.factGrid}>
+          <Fact label="Category" value={selectedRole.category} />
           <Fact label="Business Unit" value={selectedRole.unit} />
           <Fact label="Vacancy Horizon" value={selectedRole.vacancyHorizon} />
           <Fact label="Required Level" value={selectedRole.level} />
+          <Fact label="Governance Owner" value={selectedRole.governanceOwner} />
+          <Fact label="Review Cadence" value={selectedRole.reviewCadence} />
+        </div>
+
+        <div className={styles.policyGrid}>
+          <Checklist title="Appointment Flow" items={selectedRole.appointmentFlow} ordered />
+          <Checklist title="Required Attributes" items={selectedRole.requiredAttributes} />
+          <Checklist title="Compliance Checks" items={selectedRole.complianceChecks} />
         </div>
 
         <h3 className={styles.subheading}>Best Successor Matches</h3>
@@ -74,7 +83,7 @@ function RoleCard({ position, active, onClick }) {
         <strong>{position.title}</strong>
         <Badge tone={riskTone(position.risk)}>{position.risk}</Badge>
       </span>
-      <span className={styles.roleMeta}>{position.unit} | {position.transitionFrom.join(", ")}</span>
+      <span className={styles.roleMeta}>{position.category} | {position.unit} | {position.transitionFrom.join(", ")}</span>
       <span className={styles.fitTrack}>
         <span className={styles.fitFill} style={{ width: `${bestFit}%` }} />
       </span>
@@ -99,22 +108,57 @@ function Candidate({ successor }) {
           <strong>{successor.employee.name}</strong>
           <span>{successor.employee.currentRole}</span>
         </div>
-        <Badge tone={successor.employee.performance}>{successor.employee.performance}</Badge>
+        <div className={styles.badgeStack}>
+          <Badge tone={readinessTone(successor.readiness)}>{successor.readiness}</Badge>
+          <Badge tone={successor.employee.performance}>{successor.employee.performance}</Badge>
+        </div>
       </header>
       <div className={styles.scoreList}>
         <Score label="Transition fit" value={successor.fit} />
         <Score label="Targets" value={successor.employee.targetAchievement} />
         <Score label="Job match" value={successor.employee.jobMatch} />
       </div>
+      <div className={styles.candidateMeta}>
+        <span>Source: <strong>{successor.source}</strong></span>
+        <span>Type: <strong>{successor.employee.candidateType}</strong></span>
+        <span>Interim: <strong>{successor.interim ? "Yes" : "No"}</strong></span>
+      </div>
       <p className={styles.cardText}>
-        Readiness: <strong>{successor.readiness}</strong>
+        NRC / Board review: <strong>{successor.nrcReview}</strong>
       </p>
       <p className={styles.cardText}>Development focus: {successor.development}</p>
+      <div className={styles.chipGroup}>
+        {successor.employee.qualifications?.map((qualification) => (
+          <span key={qualification}>{qualification}</span>
+        ))}
+      </div>
     </article>
+  );
+}
+
+function Checklist({ title, items, ordered = false }) {
+  const ListTag = ordered ? "ol" : "ul";
+
+  return (
+    <div className={styles.checklist}>
+      <h3>{title}</h3>
+      <ListTag>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ListTag>
+    </div>
   );
 }
 
 function riskTone(risk) {
   if (risk === "medium") return "mediumRisk";
   return risk;
+}
+
+function readinessTone(readiness) {
+  if (readiness === "Immediate") return "High";
+  if (readiness === "Interim") return "neutral";
+  if (readiness === "Mid-term") return "mediumRisk";
+  return "Low";
 }

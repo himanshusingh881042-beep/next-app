@@ -1,56 +1,252 @@
 {
   "positions": [
     {
-      "id": "pos-cto",
-      "title": "Chief Technology Officer",
-      "unit": "Technology",
-      "level": "Executive",
-      "vacancyHorizon": "12 months",
+      "id": "pos-md-ceo",
+      "title": "Managing Director & Chief Executive Officer",
+      "unit": "Board",
+      "level": "Board",
+      "category": "Board",
+      "vacancyHorizon": "Immediate vacancy scenario",
       "risk": "high",
-      "transitionFrom": ["VP Engineering", "Head of Architecture", "Director of Product Engineering"],
+      "governanceOwner": "NRC",
+      "reviewCadence": "Event based and annual board succession review",
+      "appointmentFlow": ["NRC due diligence", "IRDAI and Articles validation", "NRC recommendation", "Board appointment"],
+      "transitionFrom": ["Whole-time Director", "Executive Director", "External MD & CEO candidate"],
+      "requiredAttributes": ["Insurance leadership", "Regulatory governance", "Board reporting", "Enterprise risk oversight"],
+      "complianceChecks": [
+        "IRDAI Regulations",
+        "Articles of Association",
+        "Fit and proper criteria",
+        "Board diversity and composition",
+        "Track record and integrity"
+      ],
       "successors": [
-        {"employeeId": "emp-101", "fit": 92, "readiness": "Ready now", "development": "Board exposure and enterprise budget planning"},
-        {"employeeId": "emp-103", "fit": 84, "readiness": "6-12 months", "development": "People leadership at larger scale"},
-        {"employeeId": "emp-106", "fit": 71, "readiness": "12-24 months", "development": "Commercial strategy ownership"}
+        {
+          "employeeId": "emp-110",
+          "fit": 94,
+          "readiness": "Immediate",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Recommended for Board consideration",
+          "development": "Final regulatory documentation and Board interaction"
+        },
+        {
+          "employeeId": "emp-111",
+          "fit": 89,
+          "readiness": "Interim",
+          "source": "Internal",
+          "interim": true,
+          "nrcReview": "Suitable to officiate until permanent appointment",
+          "development": "Short-term Board reporting protocol"
+        },
+        {
+          "employeeId": "emp-112",
+          "fit": 86,
+          "readiness": "Mid-term",
+          "source": "External search firm",
+          "interim": false,
+          "nrcReview": "Subject to external due diligence",
+          "development": "Company-specific governance orientation"
+        }
       ]
     },
     {
-      "id": "pos-hrd",
-      "title": "HR Director",
-      "unit": "Human Resources",
-      "level": "Director",
-      "vacancyHorizon": "18 months",
+      "id": "pos-independent-director",
+      "title": "Independent Director",
+      "unit": "Board",
+      "level": "Board",
+      "category": "Board",
+      "vacancyHorizon": "6 months",
       "risk": "medium",
-      "transitionFrom": ["Senior HR Business Partner", "Talent Acquisition Lead", "Learning and Development Manager"],
+      "governanceOwner": "NRC",
+      "reviewCadence": "Before appointment or re-appointment",
+      "appointmentFlow": ["NRC identification", "Due diligence", "Diversity and composition review", "NRC recommendation", "Board appointment"],
+      "transitionFrom": ["Board advisor", "Industry expert", "External independent director candidate"],
+      "requiredAttributes": ["Independence", "Insurance or financial services expertise", "Integrity", "Board committee experience"],
+      "complianceChecks": [
+        "Qualification and expertise",
+        "Track record",
+        "Integrity",
+        "Fit and proper criteria",
+        "Board Diversity Policy"
+      ],
       "successors": [
-        {"employeeId": "emp-104", "fit": 88, "readiness": "Ready now", "development": "Compensation governance"},
-        {"employeeId": "emp-102", "fit": 76, "readiness": "6-12 months", "development": "Employee relations portfolio"}
+        {
+          "employeeId": "emp-113",
+          "fit": 91,
+          "readiness": "Immediate",
+          "source": "External search firm",
+          "interim": false,
+          "nrcReview": "Ready for NRC recommendation",
+          "development": "Company policy and committee onboarding"
+        },
+        {
+          "employeeId": "emp-114",
+          "fit": 78,
+          "readiness": "Mid-term",
+          "source": "External",
+          "interim": false,
+          "nrcReview": "Potential candidate after committee experience review",
+          "development": "Board committee exposure"
+        }
+      ]
+    },
+    {
+      "id": "pos-cpo",
+      "title": "Chief People Officer",
+      "unit": "Human Resources",
+      "level": "Senior Management",
+      "category": "Senior Management",
+      "vacancyHorizon": "12 months",
+      "risk": "medium",
+      "governanceOwner": "CPO and CEO, with NRC review",
+      "reviewCadence": "Periodic senior management review",
+      "appointmentFlow": ["CPO and CEO competency review", "Internal shortlist", "External search if needed", "NRC review", "Board recommendation"],
+      "transitionFrom": ["Senior HR Business Partner", "Talent Management Head", "External HR leader"],
+      "requiredAttributes": ["Organisation design", "Talent strategy", "Employee relations", "Leadership coaching"],
+      "complianceChecks": ["Stated attributes", "Qualification", "Expertise", "NRC review", "Board recommendation"],
+      "successors": [
+        {
+          "employeeId": "emp-104",
+          "fit": 88,
+          "readiness": "Immediate",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Ready for NRC review",
+          "development": "Compensation governance"
+        },
+        {
+          "employeeId": "emp-102",
+          "fit": 76,
+          "readiness": "Mid-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Develop before recommendation",
+          "development": "Employee relations portfolio"
+        }
+      ]
+    },
+    {
+      "id": "pos-cto",
+      "title": "Chief Technology Officer",
+      "unit": "Technology",
+      "level": "Senior Management",
+      "category": "Senior Management",
+      "vacancyHorizon": "12 months",
+      "risk": "high",
+      "governanceOwner": "CPO and CEO, with NRC review",
+      "reviewCadence": "Periodic senior management review",
+      "appointmentFlow": ["CPO and CEO competency review", "Internal shortlist", "External search if needed", "NRC review", "Board recommendation"],
+      "transitionFrom": ["VP Engineering", "Head of Architecture", "Director of Product Engineering", "External technology leader"],
+      "requiredAttributes": ["Enterprise architecture", "Cybersecurity governance", "Scaled delivery", "Technology risk oversight"],
+      "complianceChecks": ["Stated attributes", "Qualification", "Expertise", "NRC review", "Board recommendation"],
+      "successors": [
+        {
+          "employeeId": "emp-101",
+          "fit": 92,
+          "readiness": "Immediate",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Ready for NRC review",
+          "development": "Board exposure and enterprise budget planning"
+        },
+        {
+          "employeeId": "emp-103",
+          "fit": 84,
+          "readiness": "Mid-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Coach for larger people leadership scale",
+          "development": "People leadership at larger scale"
+        },
+        {
+          "employeeId": "emp-106",
+          "fit": 71,
+          "readiness": "Long-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Invest for future leadership pipeline",
+          "development": "Commercial strategy ownership"
+        }
       ]
     },
     {
       "id": "pos-finance",
       "title": "Finance Controller",
       "unit": "Finance",
-      "level": "Senior Manager",
+      "level": "Senior Management",
+      "category": "Senior Management",
       "vacancyHorizon": "9 months",
       "risk": "low",
+      "governanceOwner": "CPO and CEO, with NRC review",
+      "reviewCadence": "Periodic senior management review",
+      "appointmentFlow": ["CPO and CEO competency review", "Internal shortlist", "NRC review", "Board recommendation"],
       "transitionFrom": ["Accounting Manager", "FP&A Manager", "Audit Lead"],
+      "requiredAttributes": ["Financial controls", "Regulatory reporting", "Audit governance", "Compliance"],
+      "complianceChecks": ["Stated attributes", "Qualification", "Expertise", "NRC review", "Board recommendation"],
       "successors": [
-        {"employeeId": "emp-105", "fit": 91, "readiness": "Ready now", "development": "Investor reporting cadence"},
-        {"employeeId": "emp-107", "fit": 68, "readiness": "12-24 months", "development": "Month-end close ownership"}
+        {
+          "employeeId": "emp-105",
+          "fit": 91,
+          "readiness": "Immediate",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Ready for NRC review",
+          "development": "Investor reporting cadence"
+        },
+        {
+          "employeeId": "emp-107",
+          "fit": 68,
+          "readiness": "Long-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Not recommended until performance improves",
+          "development": "Month-end close ownership"
+        }
       ]
     },
     {
       "id": "pos-sales",
       "title": "Regional Sales Head",
       "unit": "Sales",
-      "level": "Director",
+      "level": "Senior Management",
+      "category": "Senior Management",
       "vacancyHorizon": "6 months",
       "risk": "high",
-      "transitionFrom": ["Area Sales Manager", "Strategic Accounts Lead", "Channel Sales Manager"],
+      "governanceOwner": "CPO and CEO, with NRC review",
+      "reviewCadence": "Periodic senior management review",
+      "appointmentFlow": ["CPO and CEO competency review", "Internal shortlist", "External search if needed", "NRC review", "Board recommendation"],
+      "transitionFrom": ["Area Sales Manager", "Strategic Accounts Lead", "Channel Sales Manager", "External sales leader"],
+      "requiredAttributes": ["Distribution leadership", "Sales governance", "Forecasting", "Regulatory conduct"],
+      "complianceChecks": ["Stated attributes", "Qualification", "Expertise", "NRC review", "Board recommendation"],
       "successors": [
-        {"employeeId": "emp-108", "fit": 82, "readiness": "6-12 months", "development": "Multi-region forecast ownership"},
-        {"employeeId": "emp-109", "fit": 62, "readiness": "12-24 months", "development": "Leadership coaching and pipeline discipline"}
+        {
+          "employeeId": "emp-108",
+          "fit": 82,
+          "readiness": "Mid-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Needs multi-region readiness review",
+          "development": "Multi-region forecast ownership"
+        },
+        {
+          "employeeId": "emp-109",
+          "fit": 62,
+          "readiness": "Long-term",
+          "source": "Internal",
+          "interim": false,
+          "nrcReview": "Long-term development candidate",
+          "development": "Leadership coaching and pipeline discipline"
+        },
+        {
+          "employeeId": "emp-115",
+          "fit": 87,
+          "readiness": "Immediate",
+          "source": "External search firm",
+          "interim": false,
+          "nrcReview": "External option if internal availability is insufficient",
+          "development": "Company distribution model onboarding"
+        }
       ]
     }
   ],
@@ -60,10 +256,12 @@
       "name": "Aarav Mehta",
       "currentRole": "VP Engineering",
       "unit": "Technology",
+      "candidateType": "Internal",
       "performance": "High",
       "targetAchievement": 96,
       "jobMatch": 94,
       "potential": "High",
+      "qualifications": ["B.Tech", "Executive technology program"],
       "competencies": ["Enterprise architecture", "Executive influence", "Scaled delivery"]
     },
     {
@@ -71,10 +269,12 @@
       "name": "Priya Sharma",
       "currentRole": "Talent Acquisition Lead",
       "unit": "Human Resources",
+      "candidateType": "Internal",
       "performance": "Moderate",
       "targetAchievement": 74,
       "jobMatch": 78,
       "potential": "Medium",
+      "qualifications": ["MBA HR"],
       "competencies": ["Hiring strategy", "Stakeholder management", "Workforce planning"]
     },
     {
@@ -82,10 +282,12 @@
       "name": "Arjun Nair",
       "currentRole": "Head of Architecture",
       "unit": "Technology",
+      "candidateType": "Internal",
       "performance": "High",
       "targetAchievement": 90,
       "jobMatch": 89,
       "potential": "High",
+      "qualifications": ["M.Tech", "Cloud architecture certification"],
       "competencies": ["Platform strategy", "Security governance", "Mentoring"]
     },
     {
@@ -93,10 +295,12 @@
       "name": "Maya Iyer",
       "currentRole": "Senior HR Business Partner",
       "unit": "Human Resources",
+      "candidateType": "Internal",
       "performance": "High",
       "targetAchievement": 91,
       "jobMatch": 88,
       "potential": "High",
+      "qualifications": ["MBA HR", "Leadership coaching certification"],
       "competencies": ["Org design", "Leadership coaching", "Policy design"]
     },
     {
@@ -104,10 +308,12 @@
       "name": "Vikram Rao",
       "currentRole": "Accounting Manager",
       "unit": "Finance",
+      "candidateType": "Internal",
       "performance": "High",
       "targetAchievement": 95,
       "jobMatch": 92,
       "potential": "Medium",
+      "qualifications": ["CA", "IFRS certification"],
       "competencies": ["Controls", "Reporting", "Compliance"]
     },
     {
@@ -115,10 +321,12 @@
       "name": "Sana Khan",
       "currentRole": "Director of Product Engineering",
       "unit": "Technology",
+      "candidateType": "Internal",
       "performance": "Moderate",
       "targetAchievement": 79,
       "jobMatch": 81,
       "potential": "High",
+      "qualifications": ["B.Tech", "Product leadership program"],
       "competencies": ["Product delivery", "Team building", "Customer empathy"]
     },
     {
@@ -126,10 +334,12 @@
       "name": "Kavya Menon",
       "currentRole": "Audit Lead",
       "unit": "Finance",
+      "candidateType": "Internal",
       "performance": "Low",
       "targetAchievement": 58,
       "jobMatch": 61,
       "potential": "Medium",
+      "qualifications": ["CA Inter", "Internal audit certification"],
       "competencies": ["Risk review", "Controls testing", "Documentation"]
     },
     {
@@ -137,10 +347,12 @@
       "name": "Rohan Gupta",
       "currentRole": "Strategic Accounts Lead",
       "unit": "Sales",
+      "candidateType": "Internal",
       "performance": "High",
       "targetAchievement": 93,
       "jobMatch": 87,
       "potential": "High",
+      "qualifications": ["MBA Marketing"],
       "competencies": ["Enterprise sales", "Negotiation", "Forecasting"]
     },
     {
@@ -148,11 +360,91 @@
       "name": "Ananya Reddy",
       "currentRole": "Area Sales Manager",
       "unit": "Sales",
+      "candidateType": "Internal",
       "performance": "Moderate",
       "targetAchievement": 71,
       "jobMatch": 73,
       "potential": "Medium",
+      "qualifications": ["BBA", "Sales leadership workshop"],
       "competencies": ["Territory planning", "Coaching", "Pipeline review"]
+    },
+    {
+      "id": "emp-110",
+      "name": "Nikhil Bansal",
+      "currentRole": "Whole-time Director",
+      "unit": "Board",
+      "candidateType": "Internal",
+      "performance": "High",
+      "targetAchievement": 97,
+      "jobMatch": 95,
+      "potential": "High",
+      "qualifications": ["MBA", "Insurance leadership program"],
+      "competencies": ["Insurance leadership", "Regulatory governance", "Enterprise risk oversight"]
+    },
+    {
+      "id": "emp-111",
+      "name": "Meera Subramanian",
+      "currentRole": "Executive Director",
+      "unit": "Board",
+      "candidateType": "Internal",
+      "performance": "High",
+      "targetAchievement": 92,
+      "jobMatch": 90,
+      "potential": "High",
+      "qualifications": ["CA", "Board governance program"],
+      "competencies": ["Board reporting", "Financial governance", "Stakeholder management"]
+    },
+    {
+      "id": "emp-112",
+      "name": "Rajiv Malhotra",
+      "currentRole": "External MD & CEO Candidate",
+      "unit": "External",
+      "candidateType": "External",
+      "performance": "High",
+      "targetAchievement": 90,
+      "jobMatch": 86,
+      "potential": "High",
+      "qualifications": ["MBA", "Former insurance CEO"],
+      "competencies": ["Insurance leadership", "Regulatory relationships", "Transformation"]
+    },
+    {
+      "id": "emp-113",
+      "name": "Leela Krishnan",
+      "currentRole": "External Independent Director Candidate",
+      "unit": "External",
+      "candidateType": "External",
+      "performance": "High",
+      "targetAchievement": 88,
+      "jobMatch": 91,
+      "potential": "High",
+      "qualifications": ["Retired regulator", "Board committee experience"],
+      "competencies": ["Independence", "Risk governance", "Insurance regulation"]
+    },
+    {
+      "id": "emp-114",
+      "name": "Suresh Kulkarni",
+      "currentRole": "Industry Expert",
+      "unit": "External",
+      "candidateType": "External",
+      "performance": "Moderate",
+      "targetAchievement": 76,
+      "jobMatch": 78,
+      "potential": "Medium",
+      "qualifications": ["Actuarial fellowship"],
+      "competencies": ["Actuarial oversight", "Product governance", "Committee advisory"]
+    },
+    {
+      "id": "emp-115",
+      "name": "Pooja Deshmukh",
+      "currentRole": "External Sales Leader",
+      "unit": "External",
+      "candidateType": "External",
+      "performance": "High",
+      "targetAchievement": 94,
+      "jobMatch": 87,
+      "potential": "High",
+      "qualifications": ["MBA Marketing", "Insurance distribution certification"],
+      "competencies": ["Distribution leadership", "Sales governance", "Channel strategy"]
     }
   ]
 }

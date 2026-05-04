@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { useMemo, useState } from "react";
+import CaseStudy from "../components/CaseStudy/CaseStudy";
 import MetricsGrid from "../components/Dashboard/MetricsGrid";
 import AppShell from "../components/Layout/AppShell";
 import PerformanceSection from "../components/Performance/PerformanceSection";
+import PolicyCoverage from "../components/PolicyCoverage/PolicyCoverage";
 import RoleTransition from "../components/RoleTransition/RoleTransition";
 import successionData from "../data/succession.json";
 import {
@@ -71,6 +73,8 @@ export default function Home() {
           performanceFilter={performanceFilter}
           onPerformanceChange={setPerformanceFilter}
         />
+        <PolicyCoverage />
+        <CaseStudy />
       </AppShell>
     </>
   );

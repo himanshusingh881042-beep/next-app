@@ -52,7 +52,7 @@
 }
 
 .factGrid {
-  @apply grid gap-3 sm:grid-cols-3;
+  @apply grid gap-3 sm:grid-cols-2 xl:grid-cols-3;
 }
 
 .fact {
@@ -71,6 +71,31 @@
   @apply mt-5 text-base font-extrabold;
 }
 
+.policyGrid {
+  @apply mt-4 grid gap-3 lg:grid-cols-3;
+}
+
+.checklist {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.checklist h3 {
+  @apply text-sm font-extrabold text-canaraNavy;
+}
+
+.checklist ul,
+.checklist ol {
+  @apply mt-2 space-y-1 pl-5 text-sm text-muted;
+}
+
+.checklist ul {
+  @apply list-disc;
+}
+
+.checklist ol {
+  @apply list-decimal;
+}
+
 .candidate {
   @apply rounded-md border border-line bg-white p-4 shadow-sm;
 }
@@ -87,10 +112,30 @@
   @apply mt-3 grid gap-2;
 }
 
+.badgeStack {
+  @apply flex flex-wrap justify-end gap-2;
+}
+
+.candidateMeta {
+  @apply mt-3 grid gap-2 rounded-md bg-softBlue p-3 text-sm text-muted sm:grid-cols-3;
+}
+
+.candidateMeta strong {
+  @apply text-ink;
+}
+
 .cardText {
   @apply mt-2 text-sm text-muted;
 }
 
 .cardText strong {
   @apply text-ink;
+}
+
+.chipGroup {
+  @apply mt-3 flex flex-wrap gap-2;
+}
+
+.chipGroup span {
+  @apply rounded-md bg-softGold px-2 py-1 text-xs font-bold text-canaraNavy;
 }

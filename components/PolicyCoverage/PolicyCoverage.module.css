@@ -1,0 +1,31 @@
+.section {
+  @apply rounded-lg border border-line bg-white p-5 shadow-soft;
+}
+
+.header {
+  @apply mb-4;
+}
+
+.eyebrow {
+  @apply text-xs font-extrabold uppercase text-hsbcRed;
+}
+
+.heading {
+  @apply text-xl font-extrabold text-canaraNavy;
+}
+
+.coverageGrid {
+  @apply grid gap-3 lg:grid-cols-3;
+}
+
+.card {
+  @apply rounded-md border border-line bg-white p-4 shadow-sm;
+}
+
+.card h3 {
+  @apply font-extrabold text-canaraNavy;
+}
+
+.card p {
+  @apply mt-2 text-sm text-muted;
+}
