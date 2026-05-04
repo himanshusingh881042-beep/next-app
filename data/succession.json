@@ -15,6 +15,19 @@
       ]
     },
     {
+      "id": "pos-se",
+      "title": "Tech Lead",
+      "unit": "Technology",
+      "level": "Senior Tech Contributor",
+      "vacancyHorizon": "1 month",
+      "risk": "high",
+      "transitionFrom": ["Senior Software Engineer", "Software Engineer"],
+      "successors": [
+        {"employeeId": "emp-110", "fit": 92, "readiness": "Ready now", "development": "Technical leadership and project ownership"},
+        {"employeeId": "emp-111", "fit": 84, "readiness": "12-24 months", "development": "System design and cross-team collaboration"}
+      ]
+    },
+    {
       "id": "pos-hrd",
       "title": "HR Director",
       "unit": "Human Resources",
@@ -63,7 +76,6 @@
       "performance": "High",
       "targetAchievement": 96,
       "jobMatch": 94,
-      "potential": "High",
       "competencies": ["Enterprise architecture", "Executive influence", "Scaled delivery"]
     },
     {
@@ -74,7 +86,6 @@
       "performance": "Moderate",
       "targetAchievement": 74,
       "jobMatch": 78,
-      "potential": "Medium",
       "competencies": ["Hiring strategy", "Stakeholder management", "Workforce planning"]
     },
     {
@@ -85,7 +96,6 @@
       "performance": "High",
       "targetAchievement": 90,
       "jobMatch": 89,
-      "potential": "High",
       "competencies": ["Platform strategy", "Security governance", "Mentoring"]
     },
     {
@@ -96,7 +106,6 @@
       "performance": "High",
       "targetAchievement": 91,
       "jobMatch": 88,
-      "potential": "High",
       "competencies": ["Org design", "Leadership coaching", "Policy design"]
     },
     {
@@ -107,7 +116,6 @@
       "performance": "High",
       "targetAchievement": 95,
       "jobMatch": 92,
-      "potential": "Medium",
       "competencies": ["Controls", "Reporting", "Compliance"]
     },
     {
@@ -118,7 +126,6 @@
       "performance": "Moderate",
       "targetAchievement": 79,
       "jobMatch": 81,
-      "potential": "High",
       "competencies": ["Product delivery", "Team building", "Customer empathy"]
     },
     {
@@ -129,7 +136,6 @@
       "performance": "Low",
       "targetAchievement": 58,
       "jobMatch": 61,
-      "potential": "Medium",
       "competencies": ["Risk review", "Controls testing", "Documentation"]
     },
     {
@@ -140,7 +146,6 @@
       "performance": "High",
       "targetAchievement": 93,
       "jobMatch": 87,
-      "potential": "High",
       "competencies": ["Enterprise sales", "Negotiation", "Forecasting"]
     },
     {
@@ -151,8 +156,26 @@
       "performance": "Moderate",
       "targetAchievement": 71,
       "jobMatch": 73,
-      "potential": "Medium",
       "competencies": ["Territory planning", "Coaching", "Pipeline review"]
+    },
+    {
+      "id": "emp-110",
+      "name": "Himanshu Singh",
+      "currentRole": "Senior Software Engineer",
+      "unit": "Technology",
+      "performance": "High",
+      "targetAchievement": 98,
+      "jobMatch": 99,
+      "competencies": ["Software development", "System design", "Collaboration", "Team Leading"]
+    },  {
+      "id": "emp-111",
+      "name": "Tarun Kapoor",
+      "currentRole": "Software Engineer",
+      "unit": "Technology",
+      "performance": "Moderate",
+      "targetAchievement": 90,
+      "jobMatch": 91,
+      "competencies": ["Software development", "System design", "Collaboration"]
     }
   ]
 }

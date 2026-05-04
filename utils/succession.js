@@ -35,15 +35,76 @@ export function getDashboardMetrics(positions, employees) {
   }).length;
 
   return [
-    { label: "Critical Positions", value: positions.length, caption: "Tracked for continuity" },
-    { label: "Ready Now", value: readyNow, caption: "Successors available" },
+    { id: "criticalPositions", label: "Critical Positions", value: positions.length, caption: "Tracked for continuity" },
+    { id: "readyNow", label: "Ready Now", value: readyNow, caption: "Successors available" },
     {
+      id: "highPerformers",
       label: "High Performers",
       value: employees.filter((employee) => employee.performance === "High").length,
       caption: "Meeting full targets"
     },
-    { label: "Coverage Gaps", value: coverageGaps, caption: "Roles needing action", danger: true }
+    { id: "coverageGaps", label: "Coverage Gaps", value: coverageGaps, caption: "Roles needing action", danger: true }
   ];
+}
+
+export function getMetricDetails(metricId, positions, employees) {
+  if (metricId === "criticalPositions") {
+    return {
+      title: "Critical Positions",
+      type: "positions",
+      records: positions
+    };
+  }
+
+  if (metricId === "readyNow") {
+    const records = positions.flatMap((position) => {
+      return position.successors
+        .filter((successor) => successor.readiness === "Ready now")
+        .map((successor) => ({
+          ...successor,
+          positionTitle: position.title,
+          employee: employees.find((employee) => employee.id === successor.employeeId)
+        }));
+    });
+
+    return {
+      title: "Ready Now Successors",
+      type: "successors",
+      records
+    };
+  }
+
+  if (metricId === "highPerformers") {
+    return {
+      title: "High Performing Employees",
+      type: "employees",
+      records: employees.filter((employee) => employee.performance === "High")
+    };
+  }
+
+  if (metricId === "coverageGaps") {
+    const records = positions
+      .filter((position) => !position.successors.some((successor) => successor.readiness === "Ready now"))
+      .map((position) => ({
+        ...position,
+        successorEmployees: position.successors.map((successor) => ({
+          ...successor,
+          employee: employees.find((employee) => employee.id === successor.employeeId)
+        }))
+      }));
+
+    return {
+      title: "Coverage Gap Roles",
+      type: "coverageGaps",
+      records
+    };
+  }
+
+  return {
+    title: "Metric Details",
+    type: "empty",
+    records: []
+  };
 }
 
 export function downloadSuccessionPlan(selectedRole, successors) {

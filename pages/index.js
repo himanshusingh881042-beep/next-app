@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useMemo, useState } from "react";
+import MetricDetails from "../components/Dashboard/MetricDetails";
 import MetricsGrid from "../components/Dashboard/MetricsGrid";
 import AppShell from "../components/Layout/AppShell";
 import PerformanceSection from "../components/Performance/PerformanceSection";
@@ -9,6 +10,7 @@ import {
   downloadSuccessionPlan,
   getBusinessUnits,
   getDashboardMetrics,
+  getMetricDetails,
   getSelectedRole,
   getSuccessors,
   getVisibleEmployees,
@@ -19,6 +21,7 @@ export default function Home() {
   const [selectedRoleId, setSelectedRoleId] = useState(successionData.positions[0].id);
   const [unitFilter, setUnitFilter] = useState("all");
   const [performanceFilter, setPerformanceFilter] = useState("all");
+  const [selectedMetric, setSelectedMetric] = useState(null);
 
   const units = useMemo(() => getBusinessUnits(successionData.positions), []);
   const visiblePositions = useMemo(() => getVisiblePositions(successionData.positions, unitFilter), [unitFilter]);
@@ -34,6 +37,10 @@ export default function Home() {
   const metrics = useMemo(
     () => getDashboardMetrics(successionData.positions, successionData.employees),
     []
+  );
+  const metricDetails = useMemo(
+    () => selectedMetric ? getMetricDetails(selectedMetric, successionData.positions, successionData.employees) : null,
+    [selectedMetric]
   );
 
   function handleUnitChange(event) {
@@ -56,7 +63,8 @@ export default function Home() {
       </Head>
 
       <AppShell onExport={() => downloadSuccessionPlan(selectedRole, successors)}>
-        <MetricsGrid metrics={metrics} />
+        <MetricsGrid metrics={metrics} selectedMetric={selectedMetric} onMetricSelect={setSelectedMetric} />
+        <MetricDetails details={metricDetails} onClose={() => setSelectedMetric(null)} />
         <RoleTransition
           units={units}
           unitFilter={unitFilter}

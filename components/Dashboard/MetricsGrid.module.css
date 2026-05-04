@@ -3,7 +3,11 @@
 }
 
 .card {
-  @apply rounded-lg border border-line bg-white p-5 shadow-soft;
+  @apply rounded-lg border border-line bg-white p-5 text-left shadow-soft transition hover:border-hsbcRed;
+}
+
+.activeCard {
+  @apply rounded-lg border border-hsbcRed bg-white p-5 text-left shadow-[inset_4px_0_0_#DB0011] transition hover:border-hsbcRed;
 }
 
 .label {
